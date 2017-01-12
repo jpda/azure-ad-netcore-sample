@@ -301,3 +301,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/src/azure-ad-netcore-sample/Properties/PublishProfiles

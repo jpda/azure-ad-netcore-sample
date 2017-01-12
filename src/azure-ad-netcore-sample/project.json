@@ -1,5 +1,7 @@
-﻿{
-  "userSecretsId": "aspnet-WebApplication10-3604a9b1-76fb-4307-8f54-8acaa3f404a2",
+{
+  "title": "azure-ad-netcore-sample",
+  "description": "azure-ad-netcore-sample",
+  "userSecretsId": "aspnet-azure-ad-netcore-sample-3604a9b1-76fb-4307-8f54-8acaa3f404a2",
 
   "dependencies": {
     "Microsoft.NETCore.App": {
@@ -25,7 +27,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+    "Microsoft.IdentityModel.Clients.ActiveDirectory": "3.13.8"
   },
 
   "tools": {
@@ -63,7 +66,6 @@
       "web.config"
     ]
   },
-
   "scripts": {
     "prepublish": [ "bower install", "dotnet bundle" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
