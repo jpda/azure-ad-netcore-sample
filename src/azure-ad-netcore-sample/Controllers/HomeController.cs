@@ -17,14 +17,10 @@ namespace AzureAdNetCoreSample.Controllers
             return View();
         }
 
-        [Authorize(Roles = "82c95acc-9010-4822-9a0c-9769e5381cdb")]
+        [Authorize(Roles = "Strategic Strategy Group")]
         public IActionResult About()
         {
-            ViewData["Message"] = "This is an authenticated page to a specific group GUID. You made it!";
-            ViewBag.GroupName = "";
-            var s = new System.Net.Http.HttpClient();
-            s.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ");
-            var groupData = s.GetStringAsync("https://graph.microsoft.com/v1.0/groups/82c95acc-9010-4822-9a0c-9769e5381cdb").Result;
+            ViewData["Message"] = "This is an authenticated page to a specific group. You made it!";
             return View();
         }
 
