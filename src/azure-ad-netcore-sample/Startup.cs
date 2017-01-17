@@ -129,7 +129,7 @@ namespace AzureAdNetCoreSample
 
                         // Or, if you're using an App-Only token, we can request that here:
                         // note - if you're doing app-only, you'll need Groups.Read.All, which REQUIRES Admin consent
-                        //var appGraphToken = await aadCtx.AcquireTokenAsync("https://graph.microsoft.com", appCredential);
+                        //var appGraphToken = await aadCtx.AcquireTokenAsync("https://graph.windows.net", appCredential);
 
                         var wc = new HttpClient();
                         wc.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userGraphToken.AccessToken);
